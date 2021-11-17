@@ -1,33 +1,27 @@
+public class AireAcondicionado {
+    
+    // La temperatura del aireacondicionado
+    private double temperatura;
 
-/**
- * Write a description of class AireAcondicionado here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class AireAcondicionado
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class AireAcondicionado
+    /** 
+     * Crea un aireacondicionado
      */
-    public AireAcondicionado()
-    {
-        // initialise instance variables
-        x = 0;
+    public AireAcondicionado() {
+        temperatura = 15.0;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    // Subir la temperatura
+    public void subirTemperatura() {
+        temperatura = temperatura + 5.0;
+    }
+    
+    // Bajar la temperatura
+    public void bajarTemperatura() {
+        temperatura = temperatura - 5.0;
+    }
+    
+    // Obtener la temperatura
+    public double getTemperatura() {
+        return temperatura;
     }
 }
