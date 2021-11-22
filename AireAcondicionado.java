@@ -33,6 +33,9 @@ public class AireAcondicionado {
         if ((temperatura + incremento) <= max) {
             temperatura = temperatura + incremento;
             cambiosTemperatura = cambiosTemperatura + 1;
+            if (temperatura < maxSeleccionada) {
+                maxSeleccionada = temperatura;
+            }
         }
         else {
             System.out.println("No se puede subir más la temperatura, se ha llegado al máximo");
@@ -44,6 +47,9 @@ public class AireAcondicionado {
         if ((temperatura - incremento) >= min) {
             temperatura = temperatura - incremento;
             cambiosTemperatura = cambiosTemperatura + 1;
+            if (temperatura < minSeleccionada) {
+                minSeleccionada = temperatura;
+            }
         }
         else {
             System.out.println("No se puede bajar más la temperatura, se ha llegado al mínimo");
@@ -56,9 +62,9 @@ public class AireAcondicionado {
     }
     
     // Añadir Incremento
-    public void setIncremento(double aumentarIncremento) {
-        if (aumentarIncremento > 0) {
-            incremento = incremento + aumentarIncremento;
+    public void setIncremento(double nuevoIncremento) {
+        if (nuevoIncremento > 0) {
+            incremento = nuevoIncremento;
         }
         else {
             System.out.println("No se pueden incrementos negativos");
